@@ -1,5 +1,5 @@
 * [The Cocktail Tools](#the-cocktail-tools)
-  * [Logging and monitoring](#logging and monitoring)
+  * [Logging and monitoring](#logging-and-monitoring)
   * [Api Builders](#api-builders)
   * [Ruby Gems](#ruby-gems)
   * [Ruby Web Frameworks](#ruby-web-frameworks)
@@ -26,6 +26,7 @@
   * [tacoma](https://github.com/pantulis/tacoma) - Simple wrapper for AWS credential key management
   * [rails_panel](https://github.com/dejan/rails_panel) - Chrome extension for Rails development
   * [awesome_print](https://github.com/awesome-print/awesome_print) - Pretty print your Ruby objects with style -- in full color and with proper indentation
+  * [shoryuken](https://github.com/phstc/shoryuken) - A super efficient AWS SQS thread based message processor for Ruby
 
 ## Ruby Web Frameworks
   * [rails](http://rubyonrails.org/)
