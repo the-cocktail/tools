@@ -15,6 +15,7 @@
 
 ## Logging and monitoring
   * [grafana](https://github.com/grafana/grafana) - The tool for beautiful monitoring and metric analytics & dashboards for Graphite, InfluxDB & Prometheus & More
+  * [scoutapp](https://scoutapp.com/) - Ruby on Rails app monitoring to track down memory leaks, N+1s, slow code and more
 
 ## API Builders & DSL
   * [flask](http://flask.pocoo.org/) - Flask is a microframework for Python based on Werkzeug, Jinja 2 and good intentions
