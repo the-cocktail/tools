@@ -50,6 +50,8 @@
   * [Route53 Gem](https://github.com/pcorliss/ruby_route_53) - Ruby gem and command line tool for Amazon's Route 53 service. http://blog.50projects.com
   * [AWS Command line tool](https://github.com/aws/aws-cli) - Universal Command Line Interface for Amazon Web Services
   * [S3cmd](https://github.com/s3tools/s3cmd) - Official s3cmd repo -- Command line tool for managing Amazon S3 and CloudFront services http://s3tools.org/s3cmd
+  * [cap-ec2 (Capistrano v3)](https://github.com/forward3d/cap-ec2) - Capify-EC2 rewritten for Capistrano v3
+  * [capify-ec2 (Capistrano v2)](https://github.com/forward/capify-ec2) - Capify-EC2 is used to generate Capistrano namespaces and tasks from Amazon EC2 instance tags, dynamically building the list of servers to be deployed to. https://rubygems.org/gems/capify-ec2
 
 ## ORM
   * [active-record](https://github.com/rails/rails/tree/master/activerecord) - Object-relational mapping in Rails
