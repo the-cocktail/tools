@@ -56,6 +56,7 @@
 
 ## IDE & Text Editor
   * [sublime-text-3](https://www.sublimetext.com/3) - Sublime Text is a sophisticated text editor for code, markup and prose.
+  * [vim](http://www.vim.org) - Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient.
 
 ## Linux utilities
   * [shutter](http://shutter-project.org/) - Shutter is a feature-rich screenshot program for Linux based operating systems such as Ubuntu
