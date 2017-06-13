@@ -60,3 +60,7 @@
 
 ## Linux utilities
   * [shutter](http://shutter-project.org/) - Shutter is a feature-rich screenshot program for Linux based operating systems such as Ubuntu
+
+## Other awesome lists
+  * [Chatbots](https://github.com/BotCube/awesome-bots) - Awesome Bots
+  
