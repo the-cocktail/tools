@@ -63,4 +63,4 @@
 
 ## Other awesome lists
   * [Chatbots](https://github.com/BotCube/awesome-bots) - Awesome Bots
-  
+  * [Data Engineering](https://github.com/igorbarinov/awesome-data-engineering) - Awesome Data Engineering  
