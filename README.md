@@ -14,7 +14,8 @@
   * [Editor Plugins](#editor-plugins)
   * [IDE & Text Editor](#ide-&-text-editor)
   * [Linux utilities](#linux-utilities)
-
+  * [Other Awesome Lists](#other-awesome-lists)
+  
 ## Logging and monitoring
   * [grafana](https://github.com/grafana/grafana) - The tool for beautiful monitoring and metric analytics & dashboards for Graphite, InfluxDB & Prometheus & More
   * [scoutapp](https://scoutapp.com/) - Ruby on Rails app monitoring to track down memory leaks, N+1s, slow code and more
