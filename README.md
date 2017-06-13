@@ -5,7 +5,7 @@
   * [Ruby Web Frameworks](#ruby-web-frameworks)
   * [PHP Web Frameworks](#php-web-frameworks)
   * [Ecommerce Frameworks](#ecommerce-frameworks)
-  * [JS librearies](#js-librearies)
+  * [JS libraries](#js-librearies)
   * [React utilities](#react-utilities)
   * [ORM](#orm)
   * [Shell Plugins](#shell-plugins)
@@ -44,6 +44,17 @@
 
 ## JS libraries
   * [GMapz](https://github.com/carloscabo/gmapz) - GMapz is yet another Google Maps JS library. It eases the creation of Google Maps, it's responsive, supports the creation of multiple instances in the same page (each one with its own settings), the creation of custom styled infowindows, and other useful helpers.
+  * [React](https://facebook.github.io/react/) - A Javascript library for building user interfaces.
+  * [Polymer](https://www.polymer-project.org/) - Polymer is a JavaScript library that helps you create custom reusable HTML elements, and use them to build performant, maintainable apps.
+  * [Jest](https://facebook.github.io/jest/) - An automated testing library for React.
+
+## Front End Frameworks
+  * [Angular](https://angular.io/)
+  * [VueJs](https://vuejs.org/)
+
+## Front End Tools
+  * [Webpack](https://webpack.js.org/) - A module bunlder with dependencies.
+  * [Yarn](https://yarnpkg.com/lang/en/) - A deterministic dependency manager.
 
 ## ORM
   * [active-record](https://github.com/rails/rails/tree/master/activerecord) - Object-relational mapping in Rails
@@ -53,10 +64,13 @@
   * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) - A delightful community-driven (with 1,000+ contributors) framework for managing your zsh configuration. Includes 200+ optional plugins (rails, git, OSX, hub, capistrano, brew, ant, php, python, etc), over 140 themes to spice up your morning, and an auto-update tool so that makes it easy to keep up with the latest updates from the community.
 
 ## Editor Plugins
+  * [ESLint](http://eslint.org/) - The pluggable linting utility for JavaScript and JSX
+  * [Sass-Lint](https://www.npmjs.com/package/sass-lint) - A Node-only Sass linter for both sass and scss syntax!
 
 ## IDE & Text Editor
   * [sublime-text-3](https://www.sublimetext.com/3) - Sublime Text is a sophisticated text editor for code, markup and prose.
   * [vim](http://www.vim.org) - Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient.
+  * [Vs Code](https://code.visualstudio.com/) - Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.
 
 ## Linux utilities
   * [shutter](http://shutter-project.org/) - Shutter is a feature-rich screenshot program for Linux based operating systems such as Ubuntu
