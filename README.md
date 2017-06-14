@@ -15,7 +15,7 @@
   * [IDE & Text Editor](#ide-&-text-editor)
   * [Linux utilities](#linux-utilities)
   * [Other Awesome Lists](#other-awesome-lists)
-  
+
 ## Logging and monitoring
   * [grafana](https://github.com/grafana/grafana) - The tool for beautiful monitoring and metric analytics & dashboards for Graphite, InfluxDB & Prometheus & More
   * [scoutapp](https://scoutapp.com/) - Ruby on Rails app monitoring to track down memory leaks, N+1s, slow code and more
@@ -24,6 +24,9 @@
   * [flask](http://flask.pocoo.org/) - Flask is a microframework for Python based on Werkzeug, Jinja 2 and good intentions
   * [sinatra](http://www.sinatrarb.com/) - Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort.
   * [plug](https://github.com/elixir-lang/plug) - A specification and conveniences for composable modules between web applications
+  * [grape](https://github.com/ruby-grape/grape) - An opinionated framework for creating REST-like APIs in Ruby.
+  * [Doorkeeper](https://github.com/doorkeeper-gem/doorkeeper) - Doorkeeper is a gem that makes it easy to introduce OAuth 2 provider functionality to your Rails or Grape application.
+  * [Postman](https://www.getpostman.com/) - A powerful GUI platform to make your API development faster & easier, from building API requests through testing, documentation and sharing.
 
 ## Ruby Gems
   * [spreadsheet](https://github.com/zdavatz/spreadsheet) - The Ruby Spreadsheet by ywesee GmbH
@@ -31,6 +34,10 @@
   * [rails_panel](https://github.com/dejan/rails_panel) - Chrome extension for Rails development
   * [awesome_print](https://github.com/awesome-print/awesome_print) - Pretty print your Ruby objects with style -- in full color and with proper indentation
   * [shoryuken](https://github.com/phstc/shoryuken) - A super efficient AWS SQS thread based message processor for Ruby
+  * [Better Errors](https://github.com/charliesome/better_errors) - Better Errors replaces the standard Rails error page with a much better and more useful error page. It is also usable outside of Rails in any Rack app as Rack middleware.
+  * [Pry](http://pryrepl.org/) - An IRB alternative and runtime developer console
+  * [MailCatcher](https://mailcatcher.me/) - MailCatcher runs a super simple SMTP server which catches any message sent to it to display in a web interface. Run mailcatcher, set your favourite app to deliver to smtp://127.0.0.1:1025 instead of your default SMTP server, then check out http://127.0.0.1:1080 to see the mail that's arrived so far.
+  * [Sidekiq](http://sidekiq.org/) - Simple, efficient background processing for Ruby.
 
 ## Ruby Web Frameworks
   * [rails](http://rubyonrails.org/)
@@ -80,4 +87,4 @@
 
 ## Other awesome lists
   * [Chatbots](https://github.com/BotCube/awesome-bots) - Awesome Bots
-  * [Data Engineering](https://github.com/igorbarinov/awesome-data-engineering) - Awesome Data Engineering  
+  * [Data Engineering](https://github.com/igorbarinov/awesome-data-engineering) - Awesome Data Engineering
