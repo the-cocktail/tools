@@ -44,6 +44,7 @@
 
 ## PHP Web Frameworks
   * [symfony](http://symfony.es/)
+  * [laravel](https://laravel.com/)
 
 ## Ecommerce Frameworks
   * [Spree](https://github.com/spree/spree) - Spree is a complete open source ecommerce solution for Ruby on Rails
