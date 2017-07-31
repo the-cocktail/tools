@@ -28,6 +28,7 @@
   * [grape](https://github.com/ruby-grape/grape) - An opinionated framework for creating REST-like APIs in Ruby.
   * [Doorkeeper](https://github.com/doorkeeper-gem/doorkeeper) - Doorkeeper is a gem that makes it easy to introduce OAuth 2 provider functionality to your Rails or Grape application.
   * [Postman](https://www.getpostman.com/) - A powerful GUI platform to make your API development faster & easier, from building API requests through testing, documentation and sharing.
+  * [GraphQL](https://www.graphql.com/) - GraphQL is an open spec for a flexible API layer. Put GraphQL over your existing backends to build products faster than ever before.
 
 ## Ruby Gems
   * [spreadsheet](https://github.com/zdavatz/spreadsheet) - The Ruby Spreadsheet by ywesee GmbH
@@ -59,6 +60,7 @@
   * [React](https://facebook.github.io/react/) - A Javascript library for building user interfaces.
   * [Polymer](https://www.polymer-project.org/) - Polymer is a JavaScript library that helps you create custom reusable HTML elements, and use them to build performant, maintainable apps.
   * [Jest](https://facebook.github.io/jest/) - An automated testing library for React.
+  * [Apollo Client](http://dev.apollodata.com/) - The flexible, production ready GraphQL client for React and native apps.
 
 ## Front End Frameworks
   * [Angular](https://angular.io/)
