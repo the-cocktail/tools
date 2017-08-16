@@ -1,5 +1,5 @@
 * [The Cocktail Tools](#the-cocktail-tools)
-  * [Tests] (#tests)
+  * [Tests](#tests)
   * [Logging and monitoring](#logging-and-monitoring)
   * [Api Builders](#api-builders)
   * [Ruby Gems](#ruby-gems)
