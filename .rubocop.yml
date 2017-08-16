@@ -1,0 +1,100 @@
+inherit_from: .rubocop_todo.yml
+        
+AllCops:
+  TargetRubyVersion: 2.3
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+    - '**/Gemfile'
+  Exclude:
+    - 'vendor/**/*'
+    - 'bin/*'
+    - 'config/**/*'
+    - 'db/**/*'
+
+Rails:
+  Enabled: true
+
+# Accept single-line methods with no body
+SingleLineMethods:
+  AllowIfMethodIsEmpty: true
+
+# Top-level documentation of classes and modules are needless
+Documentation:
+  Enabled: true
+  Exclude:
+    - 'app/**/application_*.rb'
+    - 'app/controllers/**/*.rb'
+    - 'test/**/*.rb'
+    - 'app/policies/*.rb'
+    - 'app/dashboards/*.rb'
+    - 'app/uploaders/*.rb'
+    - 'app/fields/*.rb'
+    - 'app/helpers/*.rb'
+    - 'app/models/*.rb'
+
+# Prefer double_quotes strings unless your string literal contains escape chars
+StringLiterals:
+  EnforcedStyle: double_quotes
+
+# Prefer raise over fail for exceptions
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+# Prefer trailing comma in argument lists
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+# Prefer trailing comma in array and hash literals
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma
+
+# Prefer parentheses for almost all percent literals
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%i': '()'
+    '%I': '()'
+    '%w': '()'
+    '%W': '()'
+
+# Line 'frozen_string_literal: true' is not mandatory
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Non ASCII chars are permitted in comments
+Style/AsciiComments:
+  Enabled: false
+
+# Roch ha comentado en más de una ocasión que los espacios delante y detrás de
+# un paréntesis o pipe lo hacen más fácil de leer para él.
+Layout/SpaceAroundBlockParameters:
+  Enabled: false
+Layout/SpaceInsideParens:
+  Enabled: false
+Layout/SpaceInsideBrackets:
+  Enabled: false
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+# Test methods, blocks, and class with unlimited length
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - 'test/**/*.rb'
+    - 'lib/tasks/*.rake'
+
+Metrics/MethodLength:
+  Enabled: true
+  Exclude:
+    - 'test/**/*.rb'
+
+Metrics/ClassLength:
+  Enabled: true
+  Exclude:
+    - 'test/**/*.rb'
+Metrics/LineLength:
+  Exclude:
+    - 'test/**/*.rb'
+Metrics/AbcSize:
+  Exclude:
+    - 'test/**/*.rb'
