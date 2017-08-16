@@ -19,9 +19,9 @@
   * [Other Awesome Lists](#other-awesome-lists)
 
 ## Tests
-  * [rubocop](https://github.com/bbatsov/rubocop) A Ruby static code analyzer, based on the community Ruby style guide (*NOTA*: nuestro estilo lo estamos definiendo *entre todo el equipo* [este .rubocop.yml](https://github.com/the-cocktail/tools/blob/master/.rubocop.yml). No te cortes, comenta cualquier capricho que tengas!!)
-  * [minitest](https://github.com/seattlerb/minitest) _minitest_ provides a complete suite of testing facilities supporting TDD, BDD, mocking, and benchmarking.
-  * [rspec](https://github.com/rspec/rspec) Behaviour Driven Development for Ruby
+  * [rubocop](https://github.com/bbatsov/rubocop) - A Ruby static code analyzer, based on the community Ruby style guide (*NOTA*: nuestro estilo lo estamos definiendo *entre todo el equipo* [este .rubocop.yml](https://github.com/the-cocktail/tools/blob/master/.rubocop.yml). No te cortes, comenta cualquier capricho que tengas!!)
+  * [minitest](https://github.com/seattlerb/minitest) - _minitest_ provides a complete suite of testing facilities supporting TDD, BDD, mocking, and benchmarking.
+  * [rspec](https://github.com/rspec/rspec) - Behaviour Driven Development for Ruby
 
 ## Logging and monitoring
   * [grafana](https://github.com/grafana/grafana) - The tool for beautiful monitoring and metric analytics & dashboards for Graphite, InfluxDB & Prometheus & More
@@ -37,6 +37,7 @@
   * [GraphQL](https://www.graphql.com/) - GraphQL is an open spec for a flexible API layer. Put GraphQL over your existing backends to build products faster than ever before.
 
 ## Ruby Gems
+  * [Pronto](https://github.com/prontolabs/pronto) - Quick automated code review of your changes 
   * [spreadsheet](https://github.com/zdavatz/spreadsheet) - The Ruby Spreadsheet by ywesee GmbH
   * [tacoma](https://github.com/pantulis/tacoma) - Simple wrapper for AWS credential key management
   * [rails_panel](https://github.com/dejan/rails_panel) - Chrome extension for Rails development
