@@ -26,13 +26,8 @@ Documentation:
   Exclude:
     - 'app/**/application_*.rb'
     - 'app/controllers/**/*.rb'
+    - 'app/helpers/**/*.rb'
     - 'test/**/*.rb'
-    - 'app/policies/*.rb'
-    - 'app/dashboards/*.rb'
-    - 'app/uploaders/*.rb'
-    - 'app/fields/*.rb'
-    - 'app/helpers/*.rb'
-    - 'app/models/*.rb'
 
 # Prefer double_quotes strings unless your string literal contains escape chars
 StringLiterals:
