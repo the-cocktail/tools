@@ -5,6 +5,7 @@
   * [Ruby Gems](#ruby-gems)
   * [Ruby Web Frameworks](#ruby-web-frameworks)
   * [PHP Web Frameworks](#php-web-frameworks)
+  * [Python Web Frameworks](#python-web-frameworks)
   * [Ecommerce Frameworks](#ecommerce-frameworks)
   * [Infrastructure management utilities](#infrastructure-management-utilities)
   * [JS libraries](#js-libraries)
@@ -54,6 +55,9 @@
 ## PHP Web Frameworks
   * [symfony](http://symfony.es/)
   * [laravel](https://laravel.com/)
+
+## Python Web Frameworks
+  * [Django](https://www.djangoproject.com/)
 
 ## Ecommerce Frameworks
   * [Spree](https://github.com/spree/spree) - Spree is a complete open source ecommerce solution for Ruby on Rails
