@@ -14,7 +14,7 @@
   * [ORM](#orm)
   * [Shell Plugins](#shell-plugins)
   * [Editor Plugins](#editor-plugins)
-  * [IDE & Text Editor](#ide-&-text-editor)
+  * [IDE & Text Editor](#ide--text-editor)
   * [Linux utilities](#linux-utilities)
   * [Other Awesome Lists](#other-awesome-lists)
 
