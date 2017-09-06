@@ -90,6 +90,7 @@
 
 ## Shell Plugins
   * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) - A delightful community-driven (with 1,000+ contributors) framework for managing your zsh configuration. Includes 200+ optional plugins (rails, git, OSX, hub, capistrano, brew, ant, php, python, etc), over 140 themes to spice up your morning, and an auto-update tool so that makes it easy to keep up with the latest updates from the community.
+    * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) - Highlighing of commands whilst they are typed at a zsh prompt into an interactive terminal. 
   * [fzf](https://github.com/junegunn/fzf) - fzf is a general-purpose command-line fuzzy finder.
   * [jq](https://github.com/stedolan/jq) - jq is a lightweight and flexible command-line JSON processor.
   * [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) - A code searching tool similar to ack, with a focus on speed.
