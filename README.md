@@ -18,6 +18,7 @@
   * [IDE & Text Editor](#ide--text-editor)
   * [Linux utilities](#linux-utilities)
   * [Other Awesome Lists](#other-awesome-lists)
+  * [Development environments](#development-environments)
 
 ## Tests
   * [rubocop](https://github.com/bbatsov/rubocop) - A Ruby static code analyzer, based on the community Ruby style guide (*NOTA*: nuestro estilo lo estamos definiendo *entre todo el equipo* [este .rubocop.yml](https://github.com/the-cocktail/tools/blob/master/.rubocop.yml). No te cortes, comenta cualquier capricho que tengas!!)
@@ -38,7 +39,7 @@
   * [GraphQL](https://www.graphql.com/) - GraphQL is an open spec for a flexible API layer. Put GraphQL over your existing backends to build products faster than ever before.
 
 ## Ruby Gems
-  * [Pronto](https://github.com/prontolabs/pronto) - Quick automated code review of your changes 
+  * [Pronto](https://github.com/prontolabs/pronto) - Quick automated code review of your changes
   * [spreadsheet](https://github.com/zdavatz/spreadsheet) - The Ruby Spreadsheet by ywesee GmbH
   * [tacoma](https://github.com/pantulis/tacoma) - Simple wrapper for AWS credential key management
   * [rails_panel](https://github.com/dejan/rails_panel) - Chrome extension for Rails development
@@ -94,7 +95,7 @@
 
 ## Shell Plugins
   * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) - A delightful community-driven (with 1,000+ contributors) framework for managing your zsh configuration. Includes 200+ optional plugins (rails, git, OSX, hub, capistrano, brew, ant, php, python, etc), over 140 themes to spice up your morning, and an auto-update tool so that makes it easy to keep up with the latest updates from the community.
-    * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) - Highlighing of commands whilst they are typed at a zsh prompt into an interactive terminal. 
+    * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) - Highlighing of commands whilst they are typed at a zsh prompt into an interactive terminal.
   * [fzf](https://github.com/junegunn/fzf) - fzf is a general-purpose command-line fuzzy finder.
   * [jq](https://github.com/stedolan/jq) - jq is a lightweight and flexible command-line JSON processor.
   * [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) - A code searching tool similar to ack, with a focus on speed.
@@ -110,6 +111,9 @@
 
 ## Linux utilities
   * [shutter](http://shutter-project.org/) - Shutter is a feature-rich screenshot program for Linux based operating systems such as Ubuntu
+
+## Development environments
+  * [Docker basics](develop_with_docker.md) - Basical commands to use docker in development environments
 
 ## Other awesome lists
   * [Chatbots](https://github.com/BotCube/awesome-bots) - Awesome Bots
