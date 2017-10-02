@@ -7,16 +7,19 @@
 ### postgresql
 
 `docker volume create postgres_volume`
+
 `docker run -d --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -v postgres_volume:/var/lib/postgresql postgres:latest`
 
 ### mysql
 
 `docker volume create mysql_volume`
+
 `docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 -v mysql_volume:/var/lib/mysql mysql:latest`
 
 #### mysql with specific version
 
 `docker volume create mysql_volume_5_6`
+
 `docker run -d --name mysql_5_6 -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 -v mysql_volume_5_6:/var/lib/mysql mysql:5.6`
 
 ### couchdb + elasticsearch
@@ -26,16 +29,23 @@
 ## manage apps
 
 `docker ps` (docs)[https://docs.docker.com/engine/reference/commandline/ps/]
+
 `docker restart NAME` (docs)[https://docs.docker.com/engine/reference/commandline/restart/]
+
 `docker start NAME`
+
 `docker stop NAME`
 
 ## (Manage volumes)[https://docs.docker.com/engine/reference/commandline/volume_create/]
 
 `docker volume create NAME`   Create a volume
+
 `docker volume inspect`       Display detailed information on one or more volumes
+
 `docker volume ls`            List volumes
+
 `docker volume prune`         Remove all unused volumes
+
 `docker volume rm NAME`       Remove one or more volumes
 
 ## Rails apps
