@@ -17,8 +17,9 @@
   * [Editor Plugins](#editor-plugins)
   * [IDE & Text Editor](#ide--text-editor)
   * [Linux utilities](#linux-utilities)
-  * [Other Awesome Lists](#other-awesome-lists)
   * [Development environments](#development-environments)
+  * [Other Awesome Lists](#other-awesome-lists)
+
 
 ## Tests
   * [rubocop](https://github.com/bbatsov/rubocop) - A Ruby static code analyzer, based on the community Ruby style guide (*NOTA*: nuestro estilo lo estamos definiendo *entre todo el equipo* [este .rubocop.yml](https://github.com/the-cocktail/tools/blob/master/.rubocop.yml). No te cortes, comenta cualquier capricho que tengas!!)
