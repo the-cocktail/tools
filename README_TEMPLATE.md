@@ -1,50 +1,75 @@
-# Título del proyecto
-Describe tu proyecto, ¿que hace?, ¿para que sirve?, ¿que tipo de proyecto es?
+Template para README
+Remplaza todo lo que este entre comillas, si algun literal no aplica para tu proyecto dejalo en blanco pero no lo borres.
+
+# "Nombre del proyecto"
+"Describe tu proyecto, ¿que tipo de proyecto es? ¿que hace?"
 
 ## Stack tecnológico
-Que tipo de arquitectura es (MVC, Componentes, Microservicios...)
-* Lenguaje
-* Base de datos
-* ‎Servicio de cache (Redis)
-* Servicio de trabajos en cola (Sidekiq)
+"¿Que tipo de arquitectura es? (MVC, Componentes, Microservicios...)"
+
+* "Lenguaje con su version espesifica"
+* "Framework con su version espesifica"
+* "Base de datos con su version espesifica"
+* "‎Servicio de cache ej: Redis"
+* "Servicio de cola de trabajos ej: Sidekiq"
 
 ## Instalación y configuración
-Escribe los pasos necesarios para poder iniciar la aplicación y sus servicios principales, puedes enlazar a documenteción externa o agregarlo como prerequisito; pero no des por hecho que otro desarrollador sabe como hacerlo
+"Escribe los pasos necesarios para poder iniciar la aplicación y sus servicios principales, puedes enlazar a documentación externa o agregarlo como prerequisito; pero no des por hecho que otro desarrollador ya lo sabe.
 
-Puedes agregar mas literales en el orden que necesites
+En los procesos de instalación describe los servicios que deben ser iniciados para que funcione ej: base de datos, redis, etc. Si es posible describe como hacerlo con docker.
+
+Puedes agregar mas literales en el orden que necesites pero no borres ninguno de estos.
+si existe un script o una imagen que ya ha ejecutado ese proceso escribe que el proceso ya ha sido ejecutado."
+
 - Prerequisitos
+
+"¿Que prerequisitos necesita el proyecto?"
+- ‎Gestión de claves
+
+"Escribe o enlaza como se consiguen las claves necesarias para iniciar el proyecto"
 - Instalar dependencias
 ```sh
 
 ```
-- ‎Gestion de claves
 - ‎Aprovisionamiento de datos
+
+"Explica los pasos necesarios para aprovisionar la aplicación de datos ej: ejecutando una seed o descargado un backup de base de datos"
 ```sh
 
 ```
-- ‎Iniciar (poder hacer un hello world del proyecto)
+- ‎Iniciar
+
+"Escribe el comando o los comandos necesarios para que la aplicación inicie"
+```sh
+
+```
 
 ## Enlaces de interés
 
-* wiki:
-* ‎staging:
-* ‎producción:
-* gestión claves y permisos:
-* ‎documentación:
-* proceso de despliegue:
-* canales de comunicación:
+* Wiki:
+* ‎Staging:
+* ‎Producción:
+* Documentación en drive:
+* Canales de comunicación:
+* Claves y permisos:
+* Proceso de despliegue:
+* Monitorización:
+* Integración continua:
 
 ## Ayuda para el desarrollador
-Algún consejo importante o cualquier problema recurrente que encuentres como desarrollador agregalo aqui o pon un enlace a la wiki
-### comando de despliege
+"Algún consejo importante o cualquier problema recurrente que encuentres como desarrollador agregalo aqui o pon un enlace a la wiki"
+
+### usuarios de prueba
+
+### despliegue
 ```sh
 
 ```
-### comando para test
+### test
 ```sh
 
 ```
-### comando para linter
+### linter
 ```sh
 
 ```
