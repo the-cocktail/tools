@@ -7,9 +7,9 @@ Remplaza todo lo que este entre comillas, si algun literal no aplica para tu pro
 ## Stack tecnológico
 "¿Que tipo de arquitectura es? (MVC, Componentes, Microservicios...)"
 
-* "Lenguaje con su version espesifica"
-* "Framework con su version espesifica"
-* "Base de datos con su version espesifica"
+* "Lenguaje con su version específica"
+* "Framework con su version específica"
+* "Base de datos con su version específica"
 * "‎Servicio de cache ej: Redis"
 * "Servicio de cola de trabajos ej: Sidekiq"
 
@@ -23,7 +23,7 @@ si existe un script o una imagen que ya ha ejecutado ese proceso escribe que el 
 
 - Prerequisitos
 
-"¿Que prerequisitos necesita el proyecto?"
+"¿Qué prerequisitos necesita el proyecto?"
 - ‎Gestión de claves
 
 "Escribe o enlaza como se consiguen las claves necesarias para iniciar el proyecto"
@@ -33,7 +33,7 @@ si existe un script o una imagen que ya ha ejecutado ese proceso escribe que el 
 ```
 - ‎Aprovisionamiento de datos
 
-"Explica los pasos necesarios para aprovisionar la aplicación de datos ej: ejecutando una seed o descargado un backup de base de datos"
+"Explica los pasos necesarios para aprovisionar la aplicación de datos ej: ejecutando una seed o descargando un backup de base de datos"
 ```sh
 
 ```
