@@ -60,16 +60,18 @@ si existe un script o una imagen que ya ha ejecutado ese proceso escribe que el 
 "Algún consejo importante o cualquier problema recurrente que encuentres como desarrollador agregalo aqui o pon un enlace a la wiki"
 
 ### usuarios de prueba
+"si tu aplicacion no necesita usuarios de prueba, escribe que debe crear una cuenta y donde"
 
 ### despliegue
 ```sh
-
+"comando o comandos que utilices para desplegar a staging"
 ```
 ### test
 ```sh
-
+"comando que utilices para ejecutar la suite de test"
 ```
 ### linter
 ```sh
-
+"comando que utilices para ejecutar tu validador de guia de estilos
+ej: bundle exec rubocop, npm run eslint, mix dogma"
 ```
