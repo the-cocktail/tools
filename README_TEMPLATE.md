@@ -7,9 +7,9 @@ Remplaza todo lo que este entre comillas, si algun literal no aplica para tu pro
 ## Stack tecnológico
 "¿Que tipo de arquitectura es? (MVC, Componentes, Microservicios...)"
 
-* "Lenguaje con su version espesifica"
-* "Framework con su version espesifica"
-* "Base de datos con su version espesifica"
+* "Lenguaje con su version especifica"
+* "Framework con su version especifica"
+* "Base de datos con su version especifica"
 * "‎Servicio de cache ej: Redis"
 * "Servicio de cola de trabajos ej: Sidekiq"
 
