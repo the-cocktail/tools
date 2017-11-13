@@ -52,6 +52,7 @@ Si existe un script o una imagen que ya ha ejecutado ese proceso escribe que el 
 * ‎Staging:
 * ‎Producción:
 * Documentación en drive:
+* Infrastructura: "Readme de sistemas"
 * Canales de comunicación:
 * Claves y permisos:
 * Proceso de despliegue:
