@@ -81,7 +81,7 @@
 ## Front End Tools
   * [Webpack](https://webpack.js.org/) - A module bunlder with dependencies.
   * [Yarn](https://yarnpkg.com/lang/en/) - A deterministic dependency manager.
-  * [Figma] (https://www.figma.com/) - The collaborative interface design tool (17/11/2017 Clara y Rossi reportan que no termina de importar bien algunas fuentes y documentos de Sketch).
+  * [Figma](https://www.figma.com/) - The collaborative interface design tool (17/11/2017 Clara y Rossi reportan que no termina de importar bien algunas fuentes y documentos de Sketch).
 
 ## Infrastructure management utilities
   * [Route53 Gem](https://github.com/pcorliss/ruby_route_53) - Ruby gem and command line tool for Amazon's Route 53 service. http://blog.50projects.com
