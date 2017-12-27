@@ -1,79 +1,93 @@
-**Template para README**
+# Nombre del proyecto
 
-Reemplaza todo lo que esté entre comillas, si algún literal no aplica para tu proyecto déjalo en blanco pero no lo borres.
-
-
-# "Nombre del proyecto"
-"Describe tu proyecto, ¿qué tipo de proyecto es? ¿qué hace?"
+TODO: Título y descripción del proyecto
 
 ## Stack tecnológico
-"¿Qué tipo de arquitectura es? (MVC, Componentes, Microservicios...)"
 
-* "Lenguaje con su versión específica"
-* "Framework con su versión específica"
-* "Base de datos con su versión específica"
-* "‎Servicio de cache, ej: Redis"
-* "Servicio de cola de trabajos, ej: Sidekiq"
+|   | Versión | Enlace
+|---|---|---|
+| Lenguaje | 1.0 | www.example.org |
+| Framework | 1.0 | www.example.org |
+| Base de datos | 1.0 | www.example.org |
+| Servicio de caché | 1.0 | www.example.org |
+| Otro servicio | 1.0 | www.example.org |
 
 ## Instalación y configuración
-"Escribe los pasos necesarios para poder iniciar la aplicación y sus servicios principales, puedes enlazar a documentación externa o agregarlo como prerrequisito; pero no des por hecho que otro desarrollador ya lo sabe.
 
-En los procesos de instalación describe los servicios que deben ser iniciados para que funcione, ej: base de datos, redis, etc. Si es posible describe cómo hacerlo con docker.
+### Prerrequisitos
 
-Puedes agregar más literales en el orden que necesites pero no borres ninguno de estos.
-Si existe un script o una imagen que ya ha ejecutado ese proceso escribe que el proceso ya ha sido ejecutado."
+TODO: Prerrequisitos necesita el proyecto
 
-- Prerrequisitos
+### Gestión de claves
 
-"¿Qué prerrequisitos necesita el proyecto?"
-- ‎Gestión de claves
+TODO: Escribe o enlaza cómo se consiguen las claves necesarias para iniciar el proyecto
 
-"Escribe o enlaza cómo se consiguen las claves necesarias para iniciar el proyecto"
-- Instalar dependencias
-```sh
+### Instalar dependencias
 
 ```
-- ‎Aprovisionamiento de datos
-
-"Explica los pasos necesarios para aprovisionar la aplicación de datos, ej: ejecutando una seed o descargado un backup de base de datos"
-```sh
-
+TODO: Scripts de instalación
 ```
-- ‎Iniciar
 
-"Escribe el comando o los comandos necesarios para que la aplicación inicie"
-```sh
+### Aprovisionamiento de datos
 
+TODO: Pasos necesarios para aprovisionar la aplicación, ej: ejecutando una seed o descargado un backup de base de datos
+```
+TODO: Scripts de importación o migraciones
+```
+
+### Iniciar
+
+TODO: Escribe los comandos necesarios para iniciar la aplicación
+```
+TODO: Script de inicio
 ```
 
 ## Enlaces de interés
 
-* Wiki:
-* ‎Staging:
-* ‎Producción:
-* Documentación en drive:
-* Canales de comunicación:
-* Claves y permisos:
-* Proceso de despliegue:
-* Monitorización:
-* Integración continua:
+### Entornos
+
+| Entorno | Enlace |
+|---|---|
+| Producción | www.example.org |
+| Staging | www.example.org |
+| Integración continua | www.example.org |
+| Monitorización | www.example.org |
+
+### Documentación
+
+| Documento | Enlace |
+|---|---|
+| Wiki | www.example.org |
+| Drive | www.example.org |
+| Slack | www.example.org |
+| Otro canal de comunicación | www.example.org |
+| Proceso de despliegue | www.example.org |
+| Claves y permisos | www.example.org |
+
 
 ## Ayuda para el desarrollador
-"Algún consejo importante o cualquier problema recurrente que encuentres como desarrollador agrégalo aquí o pon un enlace a la wiki"
+
+TODO: Algún consejo importante o cualquier problema recurrente que encuentres como desarrollador agrégalo aquí o pon un enlace a la wiki
 
 ### Usuarios de prueba
-"Si tu aplicación no necesita usuarios de prueba, escribe que debe crear una cuenta y dónde"
+
+TODO: Cómo crear usuarios de prueba, si es necesario
 
 ### Despliegue
-```sh
-"Comando o comandos que utilices para desplegar a staging"
+
 ```
+TODO: Script de despliegue a staging
+```
+
 ### Test
-```sh
-"Comando que utilices para ejecutar la suite de test"
+
 ```
+TODO: Scripts de test
+```
+
 ### Linter
-```sh
-"Comando que utilices para ejecutar tu validador de guía de estilos
-ej: bundle exec rubocop, npm run eslint, mix dogma"
+
+```
+TODO: Script de validador de guía de estilos
+ej: bundle exec rubocop, npm run eslint, mix dogma
 ```
