@@ -4,13 +4,13 @@ TODO: Título y descripción del proyecto
 
 ## Stack tecnológico
 
-|   | Versión | Enlace
+|                              | Nombre  | Versión
 |---|---|---|
-| Lenguaje | 1.0 | www.example.org |
-| Framework | 1.0 | www.example.org |
-| Base de datos | 1.0 | www.example.org |
-| Servicio de caché | 1.0 | www.example.org |
-| Otro servicio | 1.0 | www.example.org |
+| Lenguaje                     |         | 1.0 |
+| Framework                    |         | 1.0 |
+| Base de datos                |         | 1.0 |
+| Servicio de caché            |         |     |
+| Servicio de cola de trabajos |         |     |
 
 ## Instalación y configuración
 
@@ -44,25 +44,17 @@ TODO: Script de inicio
 
 ## Enlaces de interés
 
-### Entornos
-
-| Entorno | Enlace |
+|                       | Enlace |
 |---|---|
-| Producción | www.example.org |
-| Staging | www.example.org |
-| Integración continua | www.example.org |
-| Monitorización | www.example.org |
-
-### Documentación
-
-| Documento | Enlace |
-|---|---|
-| Wiki | www.example.org |
-| Drive | www.example.org |
-| Slack | www.example.org |
-| Otro canal de comunicación | www.example.org |
+| Producción            | www.example.org |
+| Staging               | www.example.org |
+| Integración continua  | www.example.org |
+| Monitorización        | www.example.org |
+| Wiki                  | www.example.org |
+| Drive                 | www.example.org |
+| Slack                 | www.example.org |
 | Proceso de despliegue | www.example.org |
-| Claves y permisos | www.example.org |
+| Claves y permisos     | www.example.org |
 
 
 ## Ayuda para el desarrollador
@@ -71,7 +63,7 @@ TODO: Algún consejo importante o cualquier problema recurrente que encuentres c
 
 ### Usuarios de prueba
 
-TODO: Cómo crear usuarios de prueba, si es necesario
+TODO: Usuario de prueba por defecto o cómo crearlo
 
 ### Despliegue
 
