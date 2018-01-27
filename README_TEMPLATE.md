@@ -6,11 +6,11 @@ TODO: Título y descripción del proyecto
 
 |                              | Nombre  | Versión
 |---|---|---|
-| Lenguaje                     |         | 1.0 |
-| Framework                    |         | 1.0 |
-| Base de datos                |         | 1.0 |
-| Servicio de caché            |         |     |
-| Servicio de cola de trabajos |         |     |
+| **Lenguaje**                     |         | 1.0 |
+| **Framework**                    |         | 1.0 |
+| **Base de datos**                |         | 1.0 |
+| **Servicio de caché**            |         |     |
+| **Servicio de cola de trabajos** |         |     |
 
 ## Instalación y configuración
 
