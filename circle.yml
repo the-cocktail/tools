@@ -3,8 +3,6 @@ machine:
     Europe/Madrid
   ruby:
     version: 2.4.2
-  node:
-    version: v8.9.1
 checkout:
   post:
     - mv config/secrets.yml.example config/secrets.yml
