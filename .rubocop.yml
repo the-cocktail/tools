@@ -1,96 +1,141 @@
-# > rubocop --auto-gen-config >>>> .rubocop_todo.yml
-# inherit_from: .rubocop_todo.yml
-        
-AllCops:
-  TargetRubyVersion: 2.3
-  Include:
-    - '**/Rakefile'
-    - '**/config.ru'
-    - '**/Gemfile'
-  Exclude:
-    - 'vendor/**/*'
-    - 'bin/*'
-    - 'config/**/*'
-    - 'db/**/*'
+# rubocop version 0.52.1
+#
+# Run this command to try Rubocop.
+#     -a: Fix automaticly all smells they could solve
+#     -D: Show cop names
+#     -S: Show URL style guide to solve this smell
+#
+# bundle exec rubocop -a -D -S
 
+# Run this command to add Rubocop offenses at .rubocop_todo.yml. With this, this offenses
+# will be ignored at future inspections, but only to fix them later.
+# rubocop --auto-gen-config
+# Them, check .rubocop_todo.yml file.
+
+# Use this command commented at top of files to skip some or all Rubocop tests.
+# Disable all cops example
+# rubocop:disable all
+# rubocop:enable all
+
+# Visit http://www.rubydoc.info/gems/rubocop/RuboCop/Cop for more options and info.
+
+# inherit_from: .rubocop_todo.yml
+
+# Add files which you don't want Rubocop will check.
+#
+AllCops:
+  Include:
+    - Rakefile
+    - config.ru
+  Exclude:
+    - Gemfile
+    - Guardfile
+    - Capfile
+    - infraestructure/**/*
+    - script/**/*
+    - 'node_modules/*'
+    - 'vendor/**/*'
+    - lib/tasks/**/*
+    - lib/capistrano/**/*
+    - lib/importations/**/*
+    - spec/**/*
+    - test/**/*
+    - features/**/*
+    - db/**/*
+    - bin/**/*
+    - config/**/*
+    - app/views/**/*.json.jbuilder
+    - volumes/**/*
+
+# Avoid documentation at top of classes. But if you want to write it, you are free to do it!
+#
+Documentation:
+  Enabled: false
+
+### Rails Style ###
 Rails:
   Enabled: true
+HasAndBelongsToMany:
+  Description: 'Prefer has_many :through to has_and_belongs_to_many.'
+  Enabled: false
+Bundler/OrderedGems:
+  Enabled: false
 
-# Accept single-line methods with no body
-SingleLineMethods:
-  AllowIfMethodIsEmpty: true
+### Rails ###
+# Skip use GTM time/date methods and trust in .today() or .now()
+#
+Rails/TimeZone:
+  Enabled: false
+Rails/Date:
+  Enabled: false
 
-# Top-level documentation of classes and modules are needless
-Documentation:
-  Enabled: true
-  Exclude:
-    - 'app/**/application_*.rb'
-    - 'app/controllers/**/*.rb'
-    - 'app/helpers/**/*.rb'
-    - 'test/**/*.rb'
-
-# Prefer double_quotes strings unless your string literal contains escape chars
-StringLiterals:
+# This blocks specifies somo rules at code writing. You are free to change it, but be carefull
+# about your teammates code. This is just a kind of standar.
+#
+### Style ###
+#
+Style/StringLiterals:
+  Enabled: false
   EnforcedStyle: double_quotes
-
-# Prefer raise over fail for exceptions
 Style/SignalException:
   EnforcedStyle: only_raise
-
-# Prefer trailing comma in argument lists
-Style/TrailingCommaInArguments:
-  EnforcedStyleForMultiline: comma
-
-# Prefer trailing comma in array and hash literals
-Style/TrailingCommaInLiteral:
-  EnforcedStyleForMultiline: comma
-
-# Prefer parentheses for almost all percent literals
+Style/WordArray:
+  Enabled: false
+Style/SymbolArray:
+  Enabled: false
 Style/PercentLiteralDelimiters:
   PreferredDelimiters:
     '%i': '()'
     '%I': '()'
     '%w': '()'
     '%W': '()'
-
-# Line 'frozen_string_literal: true' is not mandatory
+Style/ModuleFunction:
+  Enabled: false
+Style/RegexpLiteral:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
 Style/FrozenStringLiteralComment:
   Enabled: false
-
-# Non ASCII chars are permitted in comments
 Style/AsciiComments:
   Enabled: false
+Style/NestedModifier:
+  Enabled: false
+Style/Lambda:
+  Enabled: false
 
-# Roch ha comentado en más de una ocasión que los espacios delante y detrás de
-# un paréntesis o pipe lo hacen más fácil de leer para él.
-Layout/SpaceAroundBlockParameters:
-  Enabled: false
+### Layout ###
 Layout/SpaceInsideParens:
-  Enabled: false
-Layout/SpaceInsideBrackets:
   Enabled: false
 Layout/SpaceInsideHashLiteralBraces:
   Enabled: false
 
-# Test methods, blocks, and class with unlimited length
+### Lint ###
+Lint/AssignmentInCondition:
+  Enabled: false
+
+### Metrics ###
+# Change this in your legacy projects to skip refactor methods and classes. For new projects, just
+# delete this block and try to write code with default Rubocop rules.
+#
 Metrics/BlockLength:
-  Enabled: true
-  Exclude:
-    - 'test/**/*.rb'
-    - 'lib/tasks/*.rake'
-
-Metrics/MethodLength:
-  Enabled: true
-  Exclude:
-    - 'test/**/*.rb'
-
+  Max: 25
+Metrics/BlockNesting:
+  Max: 3
+Metrics/ModuleLength:
+  Max: 100
 Metrics/ClassLength:
-  Enabled: true
-  Exclude:
-    - 'test/**/*.rb'
-Metrics/LineLength:
-  Exclude:
-    - 'test/**/*.rb'
+  Max: 100
+Metrics/MethodLength:
+  Max: 10
+Metrics/ParameterLists:
+  Max: 5
+  CountKeywordArgs: true
+Metrics/CyclomaticComplexity:
+  Max: 6
 Metrics/AbcSize:
-  Exclude:
-    - 'test/**/*.rb'
+  Max: 15
+Metrics/PerceivedComplexity:
+  Max: 7
+Metrics/LineLength:
+  Max: 80
