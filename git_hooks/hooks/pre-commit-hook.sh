@@ -12,19 +12,19 @@ error=0
 # These are some scripts examples you can add
 #
 # Rspec testing
-# ./sh/pre-commit/run-tests/rspec.sh
+# ./hooks/bash/pre-commit/run-tests/rspec.sh
 # if [ $? != 0 ]; then
 #   error=1
 # fi
 
 # Rubocop
-# ./sh/pre-commit/run-code-qa-reviewers/rubocop.sh 
+# ./hooks/bash/pre-commit/run-code-qa-reviewers/rubocop.sh 
 # if [ $? != 0 ]; then
 #   error=1
 # fi
 
 # Rubycritic
-# ./sh/pre-commit/run-code-qa-reviewers/rubycritic.sh -s 90 --no-browser
+# ./hooks/bash/pre-commit/run-code-qa-reviewers/rubycritic.sh -s 90 --no-browser
 # if [ $? != 0 ]; then
 #   error=1
 # fi
