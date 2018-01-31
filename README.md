@@ -24,6 +24,7 @@
   * [rubocop](https://github.com/bbatsov/rubocop) - A Ruby static code analyzer, based on the community Ruby style guide (*NOTA*: nuestro estilo lo estamos definiendo *entre todo el equipo* [este .rubocop.yml](https://github.com/the-cocktail/tools/blob/master/.rubocop.yml). No te cortes, comenta cualquier capricho que tengas!!)
   * [minitest](https://github.com/seattlerb/minitest) - _minitest_ provides a complete suite of testing facilities supporting TDD, BDD, mocking, and benchmarking.
   * [rspec](https://github.com/rspec/rspec) - Behaviour Driven Development for Ruby
+  * [Tests y QA](QA/) - About testing and QA
 
 ## Logging and monitoring
   * [grafana](https://github.com/grafana/grafana) - The tool for beautiful monitoring and metric analytics & dashboards for Graphite, InfluxDB & Prometheus & More
