@@ -29,6 +29,12 @@ error=0
 #   error=1
 # fi
 
+# Debugger Seeker
+# ./hooks/bash/pre-commit/run-code-qa-reviewers/debugger_seeker.sh
+# if [ $? != 0 ]; then
+#   error=1
+# fi
+
 if [ $error != 0 ]; then
 	exit $error
 fi
