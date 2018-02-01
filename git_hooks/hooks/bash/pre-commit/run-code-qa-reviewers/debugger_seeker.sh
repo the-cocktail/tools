@@ -4,9 +4,7 @@
 exec 1>&2
 
 consoleregexp='console.log|debugger|binding.pry'
-
 echo "[Debugger]: Looking for forgotten debugger trace..."
-
 if test $(git diff --cached | grep -E $consoleregexp | wc -l) != 0
 then
   files_changed=$(git diff --cached --name-only --)
@@ -21,3 +19,4 @@ then
   done
   exit 1;
 fi
+echo "[Debugger]: Your code is safe from debugger trace!"
