@@ -21,9 +21,11 @@
 
 # inherit_from: .rubocop_todo.yml
 
-# Add files which you don't want Rubocop will check.
+# Add files which you don't want Rubocop will check. Remember that you will need to
+# change TargetRubyVersion to your project ruby versíon.
 #
 AllCops:
+  TargetRubyVersion: 0.0
   Include:
     - Rakefile
     - config.ru
