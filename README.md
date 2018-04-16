@@ -5,6 +5,7 @@
   * [Ruby Gems](#ruby-gems)
   * [Ruby Web Frameworks](#ruby-web-frameworks)
   * [PHP Web Frameworks](#php-web-frameworks)
+  * [Python Web Frameworks](#python-web-frameworks)
   * [Ecommerce Frameworks](#ecommerce-frameworks)
   * [Infrastructure management utilities](#infrastructure-management-utilities)
   * [JS libraries](#js-libraries)
@@ -14,8 +15,9 @@
   * [ORM](#orm)
   * [Shell Plugins](#shell-plugins)
   * [Editor Plugins](#editor-plugins)
-  * [IDE & Text Editor](#ide-&-text-editor)
+  * [IDE & Text Editor](#ide--text-editor)
   * [Linux utilities](#linux-utilities)
+  * [Development environments](#development-environments)
   * [Other Awesome Lists](#other-awesome-lists)
 
 ## Tests
@@ -23,6 +25,8 @@
   * [minitest](https://github.com/seattlerb/minitest) - _minitest_ provides a complete suite of testing facilities supporting TDD, BDD, mocking, and benchmarking.
   * [rspec](https://github.com/rspec/rspec) - Behaviour Driven Development for Ruby
   * [circleci](https://circleci.com/docs/2.0/hello-world/) - Continuous Integration and Continuous Deployment with Ruby/Rails [.config.yml](https://github.com/the-cocktail/tools/blob/master/.config.yml)
+  * [Tests y QA](QA/) - About testing and QA
+
 ## Logging and monitoring
   * [grafana](https://github.com/grafana/grafana) - The tool for beautiful monitoring and metric analytics & dashboards for Graphite, InfluxDB & Prometheus & More
   * [scoutapp](https://scoutapp.com/) - Ruby on Rails app monitoring to track down memory leaks, N+1s, slow code and more
@@ -55,6 +59,9 @@
   * [symfony](http://symfony.es/)
   * [laravel](https://laravel.com/)
 
+## Python Web Frameworks
+  * [Django](https://www.djangoproject.com/)
+
 ## Ecommerce Frameworks
   * [Spree](https://github.com/spree/spree) - Spree is a complete open source ecommerce solution for Ruby on Rails
   * [Sylius](https://github.com/Sylius/Sylius) - eCommerce PHP framework built on top of Symfony with component-based architecture and format-agnostic rendering. (HTML/JSON/XML)
@@ -76,6 +83,7 @@
 ## Front End Tools
   * [Webpack](https://webpack.js.org/) - A module bunlder with dependencies.
   * [Yarn](https://yarnpkg.com/lang/en/) - A deterministic dependency manager.
+  * [Figma](https://www.figma.com/) - The collaborative interface design tool (17/11/2017 Clara y Rossi reportan que no termina de importar bien algunas fuentes y documentos de Sketch).
 
 ## Infrastructure management utilities
   * [Route53 Gem](https://github.com/pcorliss/ruby_route_53) - Ruby gem and command line tool for Amazon's Route 53 service. http://blog.50projects.com
@@ -90,6 +98,7 @@
 
 ## Shell Plugins
   * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) - A delightful community-driven (with 1,000+ contributors) framework for managing your zsh configuration. Includes 200+ optional plugins (rails, git, OSX, hub, capistrano, brew, ant, php, python, etc), over 140 themes to spice up your morning, and an auto-update tool so that makes it easy to keep up with the latest updates from the community.
+    * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) - Highlighing of commands whilst they are typed at a zsh prompt into an interactive terminal.
   * [fzf](https://github.com/junegunn/fzf) - fzf is a general-purpose command-line fuzzy finder.
   * [jq](https://github.com/stedolan/jq) - jq is a lightweight and flexible command-line JSON processor.
   * [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) - A code searching tool similar to ack, with a focus on speed.
@@ -105,6 +114,9 @@
 
 ## Linux utilities
   * [shutter](http://shutter-project.org/) - Shutter is a feature-rich screenshot program for Linux based operating systems such as Ubuntu
+
+## Development environments
+  * [Docker basics](develop_with_docker.md) - Basical commands to use docker in development environments
 
 ## Other awesome lists
   * [Chatbots](https://github.com/BotCube/awesome-bots) - Awesome Bots
