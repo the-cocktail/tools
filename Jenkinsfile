@@ -16,16 +16,16 @@ pipeline {
                 // Steps necesaries to start a build
             }
         }
-        stage('Build & Dependencies') {
+        stage('Build, Dependencies & Vulnerabilities') {
             steps {
                 echo 'Building...'
-		        // Building proyect and check dependencies
+		        // Building proyect and check dependencies searching for new vulnerabilities
             }
         }
-        stage('Test') {
+        stage('Test & Coverage') {
             steps {
                 echo 'Testing...'
-                // Pass all tests: unit, integration, functional
+                // Pass all tests: unit, integration, functional... and check test coverage percent
             }
         }
         stage('Code Review') {
