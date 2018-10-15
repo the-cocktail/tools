@@ -49,6 +49,34 @@
   to: 'mail@the-cocktail.com'
 ```
 
+### Confirmación del usuario
+
+```
+  mail (from: 'jenkins@the-cocktail.com',
+        to: 'mail@the-cocktail.com',
+        subject: "[${env.PROYECT_NAME}] Se requiere aprobación manual para continuar.",
+        body: "Por favor, visita ${env.JOB_URL} para confirmar como debe proceder.");
+                
+  script {
+    def userInput = false
+    try {
+      timeout(time: 10, unit: 'MINUTES') {
+        userInput = input(id: 'Proceed1', message: '¿Qué debo hacer?', parameters: [
+          [$class: 'BooleanParameterDefinition', defaultValue: true, description: 'Confirmación', name: 'Continuar con este paso']
+        ])
+      }
+    } catch(err) {
+      userInput = false
+    }
+
+    if (userInput == true) {
+      echo 'Doing your step...'
+    } else {
+      echo 'Doing nothing...'
+    }
+  }
+```
+
 ## Accesorios
 
 ### Publicar
@@ -94,4 +122,8 @@ Además, añadir el fichero `sonar-project.properties`:
   sonar.projectKey=repo-name
   # sources: path to code (e.g. "sonar.sources=app")
   sonar.sources=path-to-code
+
+  # Solo para proyectos Ruby con Covertura de test basada en Simplecov
+  sonar.ruby.coverage.reportPath=coverage/.resultset.json
+  sonar.ruby.coverage.framework=RSpec
 ```
