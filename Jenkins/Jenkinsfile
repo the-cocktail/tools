@@ -1,6 +1,8 @@
 pipeline {
     environment {
 	    // First steps to prepare Jenkins environment.
+
+        JENKINS_PRIV = credentials('jenkins_priv_rsa')
     }
 
     agent any
@@ -14,6 +16,9 @@ pipeline {
             steps {
                 echo 'Preparation...'
                 // Steps necesaries to start a build
+
+                sh 'cat $JENKINS_PRIV > ~/.ssh/id_rsa'
+                sh 'chmod 600 ~/.ssh/id_rsa'
             }
         }
         stage('Build, Dependencies & Vulnerabilities') {
