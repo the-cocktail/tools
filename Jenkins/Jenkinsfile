@@ -1,10 +1,10 @@
 pipeline {
+    agent {
+      label 'jenkins-agent'
+    }
     environment {
 	    // First steps to prepare Jenkins environment.
     }
-
-    agent any
-    
     options {
 	    // Plugins options
     }

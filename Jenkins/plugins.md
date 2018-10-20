@@ -21,6 +21,8 @@
       SLACK_COLOR_INFO    = '#6ECADC'
       SLACK_COLOR_WARNING = '#FFC300'
       SLACK_COLOR_GOOD    = '#3EB991'
+      SLACK_CHANNEL       = '#channel'
+
       AUTHOR = sh (
           script: 'git --no-pager show -s --format="%an" ${commit}',
           returnStdout: true
@@ -29,11 +31,11 @@
 
 
   slackSend (color: "${env.SLACK_COLOR_INFO}",
-                         channel: "#name",
+i                         channel: "${env.SLACK_CHANNEL}",
                          message: "*STARTED:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} by ${env.AUTHOR}\n More info at: ${env.BUILD_URL}")
 
   slackSend (color: "${env.SLACK_COLOR_GOOD}",
-                     channel: "#name",
+                     channel: "${env.SLACK_CHANNEL}",
                      message: "*SUCCESS:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} by ${env.AUTHOR}\n More info at: ${env.BUILD_URL}")
 ```
 
@@ -105,14 +107,13 @@
 ### SonarQube
 
 ```
-  environment {
-    SONAR_SCANNER_HOME = tool name: 'SonarQubeScanner'
+  script {
+    scannerHome = tool 'SonarQubeScanner'
+  }
+  withSonarQubeEnv('SonarQubeScanner') {
+    sh "${scannerHome}/bin/sonar-scanner"
   }
 
-
-  withSonarQubeEnv('SonarQubeServer') {
-    sh "${env.SONAR_SCANNER_HOME}/bin/sonar-scanner"
-  }
 ```
 
 Además, añadir el fichero `sonar-project.properties`:
