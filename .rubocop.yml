@@ -1,4 +1,4 @@
-# rubocop version 0.52.1
+# rubocop version 0.59.0
 #
 # Run this command to try Rubocop.
 #     -a: Fix automaticly all smells they could solve
@@ -21,27 +21,21 @@
 
 # inherit_from: .rubocop_todo.yml
 
-# Add files which you don't want Rubocop will check. Remember that you will need to
-# change TargetRubyVersion to your project ruby versíon.
+# Add files which you don't want Rubocop will check.
 #
 AllCops:
-  TargetRubyVersion: 0.0
-  Include:
-    - Rakefile
-    - config.ru
   Exclude:
     - Gemfile
     - Guardfile
     - Capfile
     - infraestructure/**/*
     - script/**/*
-    - 'node_modules/*'
+    - 'node_modules/**/*'
     - 'vendor/**/*'
     - lib/tasks/**/*
     - lib/capistrano/**/*
     - lib/importations/**/*
     - spec/**/*
-    - test/**/*
     - features/**/*
     - db/**/*
     - bin/**/*
@@ -71,14 +65,13 @@ Rails/TimeZone:
 Rails/Date:
   Enabled: false
 
-# This blocks specifies somo rules at code writing. You are free to change it, but be carefull
+### Style ###
+# This blocks specifies some rules at code writing. You are free to change it, but be carefull
 # about your teammates code. This is just a kind of standar.
 #
-### Style ###
-#
 Style/StringLiterals:
-  Enabled: false
-  EnforcedStyle: double_quotes
+  Enabled: true
+  EnforcedStyle: single_quotes
 Style/SignalException:
   EnforcedStyle: only_raise
 Style/WordArray:
@@ -102,18 +95,10 @@ Style/FrozenStringLiteralComment:
 Style/AsciiComments:
   Enabled: false
 Style/NestedModifier:
-  Enabled: false
+  Enabled: true
 Style/Lambda:
   Enabled: false
-
-### Layout ###
-Layout/SpaceInsideParens:
-  Enabled: false
-Layout/SpaceInsideHashLiteralBraces:
-  Enabled: false
-
-### Lint ###
-Lint/AssignmentInCondition:
+Style/RescueStandardError:
   Enabled: false
 
 ### Metrics ###
@@ -121,23 +106,44 @@ Lint/AssignmentInCondition:
 # delete this block and try to write code with default Rubocop rules.
 #
 Metrics/BlockLength:
-  Max: 25
+  Max: 40
 Metrics/BlockNesting:
+  CountBlocks: false
   Max: 3
 Metrics/ModuleLength:
-  Max: 100
+  Max: 300
 Metrics/ClassLength:
-  Max: 100
+  Max: 300
 Metrics/MethodLength:
-  Max: 10
+  Max: 40
 Metrics/ParameterLists:
   Max: 5
-  CountKeywordArgs: true
+  CountKeywordArgs: false
 Metrics/CyclomaticComplexity:
-  Max: 6
+  Max: 30
 Metrics/AbcSize:
-  Max: 15
-Metrics/PerceivedComplexity:
-  Max: 7
-Metrics/LineLength:
   Max: 80
+Metrics/PerceivedComplexity:
+  Max: 30
+Metrics/LineLength:
+  Max: 100
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+  IgnoreCopDirectives: false
+
+### Layout ###
+Layout/SpaceInsideParens:
+  Enabled: true
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: true
+
+### Lint ###
+Lint/AssignmentInCondition:
+  Enabled: false
+
+### Naming ###
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
