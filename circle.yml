@@ -1,0 +1,11 @@
+machine:
+  timezone:
+    Europe/Madrid
+  ruby:
+    version: 2.4.2
+checkout:
+  post:
+    - mv config/secrets.yml.example config/secrets.yml
+test:
+  post:
+    - bundle exec rubocop

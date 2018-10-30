@@ -11,7 +11,7 @@ if [ $? != 0 ]; then
   echo "---------------------------------------------------"
   read -p "Type (y/Y/yes/Yes) to continue, otherwise press any key: " Keypress
   case "$Keypress" in
-    y|Y ) echo "Perfect, but remember to check this...";;
+    y|Y|yes|Yes ) echo "Perfect, but remember to check this...";;
     * ) echo "Aborting..."; exit 1;;
   esac
 fi
