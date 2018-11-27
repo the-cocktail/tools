@@ -41,6 +41,7 @@
   * [GraphQL](https://www.graphql.com/) - GraphQL is an open spec for a flexible API layer. Put GraphQL over your existing backends to build products faster than ever before.
 
 ## Ruby Gems
+  * [Goldiloader](https://github.com/salsify/goldiloader) - Lazy-loading con ActiveRecord.
   * [Pronto](https://github.com/prontolabs/pronto) - Quick automated code review of your changes
   * [spreadsheet](https://github.com/zdavatz/spreadsheet) - The Ruby Spreadsheet by ywesee GmbH
   * [tacoma](https://github.com/pantulis/tacoma) - Simple wrapper for AWS credential key management
