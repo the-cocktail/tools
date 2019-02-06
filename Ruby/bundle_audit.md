@@ -46,3 +46,24 @@ Jenkinsfile
  Algunas vulnerabilidades son muy difíciles de corregir, por lo que este proceso es muy restrictivo.
 
  Si se llega al punto de tener alguna vulnerabilidad imposible de corregir en nuestro proyecto, se deberían comentar/eliminar las referencias a audit dentro del Jenkinsfile
+ 
+ ### Añadir excepciones
+ 
+ En el caso de encontrar alguna vulnerabilidad que no se puede solucionar en el momento, existe una manera de hacer que audit la ignore.
+ 
+ La sintaxis sera de este tipo:
+ 
+ `bundle audit --ignore CVE-2018-16476`
+ 
+donde se le pase el identificador de vulnerabilidad que te haya devuelto al pasar el audit.
+Un ejemplo:
+```
+Name: activejob
+Version: 4.2.10
+Advisory: CVE-2018-16476
+Criticality: Unknown
+URL: https://groups.google.com/forum/#!topic/rubyonrails-security/FL4dSdzr2zw
+Title: Broken Access Control vulnerability in Active Job
+Solution: upgrade to ~> 4.2.11, ~> 5.0.7.1, ~> 5.1.6.1, >= 5.2.1.1
+```
+En el siguiente escaneo ya no aparecería esta vulnerabilidad y el build de Jenkins pasaría sin problemas.
