@@ -47,3 +47,18 @@ Jenkinsfile
     reportName: 'Test Coverage Report'
   ]
  ```
+
+### Posibles errores en Jenkins
+
+ Si se producen errores de permisos en la generación de los informes de simplecov, se puede añadir un paso que fuerce el borrado de los reports antes de apagar el contenedor de la ejecución.
+
+
+ Jenkinsfile
+```
+  post {
+    always {
+      sh 'docker-compose -f docker-compose-jenkins.yml run --rm web rm -rf /app/reports/*'
+      sh 'docker-compose -f docker-compose-jenkins.yml run --rm web rm -rf /app/reports/.*'
+      sh 'docker-compose -f docker-compose-jenkins.yml down -v'
+    }
+ ```
