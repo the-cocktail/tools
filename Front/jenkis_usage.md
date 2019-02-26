@@ -2,6 +2,8 @@
 
   * [Metodología](#metodología)
     * [Scripts](#scripts)
+    * [Sonarqube](#sonarqube)
+  * [JenkinsFile](#JenkisFile)
    
 
 ## Metodología
@@ -10,125 +12,64 @@ Todos los proyectos de Front deberán pasar por una integración continua (en es
 Incluso si el CI no realizara ningún tipo de despliegue, el proyecto deberá igualmente ser ejecutado por Jenkins para correr los siguientes scripts:
 
 * **JavaScript Linter:** *npm run lint*
+* **Style Linter:** *npm run stylelint*
 * **JavaScript Unit Testing:** *npm run test:unit*
-* **SASS Linter:** *npm run sass-lint*
+
+A su vez el proyecto deberá enviarse al **Sonarqube** de The Cocktail para analizar posibles *code smells* del mismo y también mostrar en un sitio centralizado la cobertura de los tests. 
 
 ### Scripts
 Los scripts mencionados anteriormente serán los principales encargados de correr, según la configuración de cada proyecto, determinadas tareas que evaluaran nuestro código. Estos scripts se correrán bajo *node* y cada uno de ellos apuntara a las ejecuciones descriptas en el *package.json* de su proyecto.
 
-### Slack
-
+Ejemplo de *package.json*
 ```
-  environment {
-      // Slack configuration
-      SLACK_COLOR_DANGER  = '#E01563'
-      SLACK_COLOR_INFO    = '#6ECADC'
-      SLACK_COLOR_WARNING = '#FFC300'
-      SLACK_COLOR_GOOD    = '#3EB991'
-      SLACK_CHANNEL       = '#channel'
-
-      AUTHOR = sh (
-          script: 'git --no-pager show -s --format="%an" ${commit}',
-          returnStdout: true
-      ).trim()
-  }
-
-
-  slackSend (color: "${env.SLACK_COLOR_INFO}",
-i                         channel: "${env.SLACK_CHANNEL}",
-                         message: "*STARTED:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} by ${env.AUTHOR}\n More info at: ${env.BUILD_URL}")
-
-  slackSend (color: "${env.SLACK_COLOR_GOOD}",
-                     channel: "${env.SLACK_CHANNEL}",
-                     message: "*SUCCESS:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} by ${env.AUTHOR}\n More info at: ${env.BUILD_URL}")
+  "scripts": {
+    "lint": "vue-cli-service lint --fix",
+    "stylelint": "stylelint 'src/**/*.scss' --fix; exit 0",
+    "test:unit": "vue-cli-service test:unit"
+  },
 ```
 
-### Mailing
+### Sonarqube
+Para que el proyecto se envíe a **Sonarqube** es necesario un archivo de configuración bajo el siguiente naming *sonar-project.properties*.
+
+Ejemplo de *sonar-project.properties*
 
 ```
-  mail bcc: '', 
-  body: "You can go to ${env.BUILD_URL} to review the build", 
-  cc: '', 
-  from: 'jenkins@the-cocktail.com', 
-  replyTo: '', 
-  subject: "[${env.PROYECT_NAME}] Jenkins Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) SUCCESS",
-  to: 'mail@the-cocktail.com'
+# projectKey: repo name (e.g. "sonar.projectKey=thecocktail2016")
+sonar.projectKey=roadis-risk-management-front
+# sources: path to code (e.g. "sonar.sources=app")
+sonar.sources=src
+sonar.tests=tests
 ```
 
-### Confirmación del usuario
+### JenkinsFile
+
+Para que todos estos scripts y Sonar se corran en nuestra heramienta de integración continua todos los projectos deberán tener un imagen de *docker* con *node*.
+A continuación se muestra la configuración básica de un *Jenkinsfile* para que se corrán los scripts de *node* y se envie el proyecto al Sonar de TCK.
 
 ```
-  mail (from: 'jenkins@the-cocktail.com',
-        to: 'mail@the-cocktail.com',
-        subject: "[${env.PROYECT_NAME}] Se requiere aprobación manual para continuar.",
-        body: "Por favor, visita ${env.JOB_URL} para confirmar como debe proceder.");
-                
-  script {
-    def userInput = false
-    try {
-      timeout(time: 10, unit: 'MINUTES') {
-        userInput = input(id: 'Proceed1', message: '¿Qué debo hacer?', parameters: [
-          [$class: 'BooleanParameterDefinition', defaultValue: true, description: 'Confirmación', name: 'Continuar con este paso']
-        ])
-      }
-    } catch(err) {
-      userInput = false
+stage('Test & Coverage') {
+    steps {
+        echo 'Testing...'
+        sh "docker run --rm ${env.PROJECT}:latest npm run test:unit"
     }
+}
+stage('Code Review') {
+    steps {
+        echo 'Code reviewing...'
+        echo 'Running JS Linter'
+        sh "docker run --rm ${env.PROJECT}:latest npm run lint"
+        echo 'Running Style Linter'
+        sh "docker run --rm ${env.PROJECT}:latest npm run stylelint"
 
-    if (userInput == true) {
-      echo 'Doing your step...'
-    } else {
-      echo 'Doing nothing...'
+        echo 'Code Review w/ SonarQubeScanner...'
+        script {
+          scannerHome = tool 'SonarQubeScanner'
+        }
+        withSonarQubeEnv('SonarQubeScanner') {
+          sh "${scannerHome}/bin/sonar-scanner"
+        }
     }
-  }
+}
 ```
 
-## Accesorios
-
-### Publicar
-
-```
-  publishHTML target: [
-      allowMissing: false,
-      alwaysLinkToLastBuild: false,
-      keepAll: true,
-      reportDir: 'path/to/file',
-      reportFiles: 'file.txt',
-      reportName: 'Report Name'
-  ]
-```
-
-### Limpiar logs
-
-```
-  options {
-    buildDiscarder(logRotator(numToKeepStr: '5'))
-  }
-```
-
-## Aplicaciones
-
-### SonarQube
-
-```
-  script {
-    scannerHome = tool 'SonarQubeScanner'
-  }
-  withSonarQubeEnv('SonarQubeScanner') {
-    sh "${scannerHome}/bin/sonar-scanner"
-  }
-
-```
-
-Además, añadir el fichero `sonar-project.properties`:
-
-```
-  # projectKey: repo name (e.g. "sonar.projectKey=thecocktail2016")
-  sonar.projectKey=repo-name
-  # sources: path to code (e.g. "sonar.sources=app")
-  sonar.sources=path-to-code
-
-  # Solo para proyectos Ruby con Covertura de test basada en Simplecov
-  sonar.ruby.coverage.reportPath=coverage/.resultset.json
-  sonar.ruby.coverage.framework=RSpec
-```
