@@ -3,6 +3,7 @@
   * [Alertas](#alertas)
     * [Slack](#slack)
     * [Mailing](#mailing)
+    * [Confirmación del usuario](#confirmación-del-usuario)
   * [Accesorios](#accesorios)
     * [Publicar](#publicar)
     * [Limpiar logs](#limpiar-logs)
@@ -42,11 +43,11 @@ i                         channel: "${env.SLACK_CHANNEL}",
 ### Mailing
 
 ```
-  mail bcc: '', 
-  body: "You can go to ${env.BUILD_URL} to review the build", 
-  cc: '', 
-  from: 'jenkins@the-cocktail.com', 
-  replyTo: '', 
+  mail bcc: '',
+  body: "You can go to ${env.BUILD_URL} to review the build",
+  cc: '',
+  from: 'jenkins@the-cocktail.com',
+  replyTo: '',
   subject: "[${env.PROYECT_NAME}] Jenkins Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) SUCCESS",
   to: 'mail@the-cocktail.com'
 ```
@@ -58,7 +59,7 @@ i                         channel: "${env.SLACK_CHANNEL}",
         to: 'mail@the-cocktail.com',
         subject: "[${env.PROYECT_NAME}] Se requiere aprobación manual para continuar.",
         body: "Por favor, visita ${env.JOB_URL} para confirmar como debe proceder.");
-                
+
   script {
     def userInput = false
     try {
