@@ -4,9 +4,12 @@
     * [Slack](#slack)
     * [Mailing](#mailing)
     * [Confirmación del usuario](#confirmación-del-usuario)
+  * [Docker Compose](#docker-compose)
+    * [Container name](#container-name)
   * [Accesorios](#accesorios)
     * [Publicar](#publicar)
     * [Limpiar logs](#limpiar-logs)
+    * [Short commits](#short-commits)
   * [Aplicaciones](#aplicaciones)
     * [SonarQube](#sonarqube)
 
@@ -80,6 +83,16 @@ i                         channel: "${env.SLACK_CHANNEL}",
   }
 ```
 
+## Docker Compose
+
+### Container name
+
+Es recomendable en el `docker-compose-jenkins.yml` añadir a todos los contenedores la variable `container_name`. Este valor debe ser lo más sencillo y corto posible, además de no contener caracteres especiales.
+
+Esto servirá para que los nombres de los contenedores que usará Jenkins sean completamente compatibles con Docker y no se produzcan errores a la hora de generarlos.
+
+Si no se hace, entonces Jenkins utilizará 80 caracteres para el nombre de las imágenes, usándose 52 para el hash, los restantes son rellenados por el nombre de la rama, comenzando por el final. Esto provoca que a veces el primer caracter pudiese un caracter inválido para Docker, como "-" o "/".
+
 ## Accesorios
 
 ### Publicar
@@ -101,6 +114,38 @@ i                         channel: "${env.SLACK_CHANNEL}",
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
+```
+
+### Short commits
+
+```
+  environment {
+      SHORT_COMMIT = sh (
+          script: 'git rev-parse --short=7 HEAD',
+          returnStdout: true
+      ).trim()
+  }
+```
+
+Se puede usar posteriormente en los steps de los stages:
+
+```
+  sh """
+      docker tag \
+          ${env.REPO_NAME}:latest \
+          ${env.REPO_URI}/${env.PROJECT_ID}/${env.REPO_NAME}:${env.BRANCH_NAME}-${env.SHORT_COMMIT}
+      docker tag \
+          ${env.REPO_NAME}:latest \
+          ${env.REPO_URI}/${env.PROJECT_ID}/${env.REPO_NAME}:${env.BRANCH_NAME}-latest
+      docker push ${env.REPO_URI}/${env.PROJECT_ID}/${env.REPO_NAME}:${env.BRANCH_NAME}-${env.SHORT_COMMIT}
+      docker push ${env.REPO_URI}/${env.PROJECT_ID}/${env.REPO_NAME}:${env.BRANCH_NAME}-latest
+  """
+```
+```
+  sh """
+      ...
+      kubectl --namespace "${env.BRANCH_NAME}" set image "${env.K8S_RESOURCE_TYPE}/${env.REPO_NAME}-${env.K8S_RESOURCE_TYPE}" "${env.REPO_NAME}"="${env.REPO_URI}/${env.PROJECT_ID}/${env.REPO_NAME}:${env.BRANCH_NAME}-${env.SHORT_COMMIT}"
+  """
 ```
 
 ## Aplicaciones
