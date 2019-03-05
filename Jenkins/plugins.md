@@ -91,7 +91,7 @@ Es recomendable en el `docker-compose-jenkins.yml` añadir a todos los contenedo
 
 Esto servirá para que los nombres de los contenedores que usará Jenkins sean completamente compatibles con Docker y no se produzcan errores a la hora de generarlos.
 
-Si no se hace, entonces Jenkins utilizará 80 caracteres para el nombre de las imágenes, usándose 52 para el hash, los restantes son rellenados por el nombre de la rama, comenzando por el final. Esto provoca que a veces el primer caracter pudiese un caracter inválido para Docker, como "-" o "/".
+Si no se hace, entonces Jenkins utilizará 80 caracteres para el nombre de las imágenes, usándose 52 para el hash, los restantes son rellenados por el nombre de la rama, comenzando por el final. Esto provoca que a veces el primer carácter pudiese ser un carácter inválido para Docker, como "-" o "/".
 
 ## Accesorios
 
