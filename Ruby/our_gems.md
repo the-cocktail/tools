@@ -27,11 +27,6 @@ Gem with menu functionality independent from any CMS embeddable in any Rails 4 a
 
 https://github.com/simplelogica/nocms-menus
 
-### nocms-relations
-Make relations between NoCMS plugins
-
-https://github.com/simplelogica/nocms-relations
-
 ### nocms-news
 Basic news functions for NoCms
 
@@ -209,6 +204,21 @@ Capistrano shared s3 secrets
 
 https://github.com/the-cocktail/capistrano-s3-shared-secrets
 
+## redistributor
+Redistributor seamlessly distributes redis commands between master and slave making it automatic for end users. Besides it adds some nice features as namespacing and some extensions to redis commands.
+
+https://github.com/the-cocktail/redistributor
+
+## bbva-api-market
+BBVA API Market Ruby integration
+
+https://github.com/the-cocktail/bbva-api-market
+
+## omniauth-bbva
+This gem contains an OAuth2 strategy for BBVA API MARKET
+
+https://github.com/the-cocktail/omniauth-bbva
+
 # Forks
 
 ## twitter-bootstrap-rails
@@ -252,3 +262,10 @@ Automatically detect mobile requests from mobile devices in your Rails applicati
 Fork propio para implementar nuevas funcionalidad
 
 https://github.com/the-cocktail/mobile-fu
+
+## Onix
+A convenient mapping between ruby objects and the ONIX XML specification
+
+Fork propio para implementar nuevas funcionalidad
+
+https://github.com/the-cocktail/onix
