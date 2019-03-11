@@ -44,7 +44,7 @@ sonar.tests=tests
 
 ### JenkinsFile
 
-Para que todos estos scripts y Sonar se corran en nuestra heramienta de integración continua todos los projectos deberán tener un imagen de *docker* con *node*.
+Para que todos estos scripts y Sonar se corran en nuestra herramienta de integración continua todos los projectos deberán tener un imagen de *docker* con *node*.
 A continuación se muestra la configuración básica de un *Jenkinsfile* para que se corrán los scripts de *node* y se envie el proyecto al Sonar de TCK.
 
 ```
