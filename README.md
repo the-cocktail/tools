@@ -1,24 +1,25 @@
-* [The Cocktail Tools](#the-cocktail-tools)
-  * [Tests](#tests)
-  * [Logging and monitoring](#logging-and-monitoring)
-  * [Api Builders](#api-builders)
-  * [Ruby Gems](#ruby-gems)
-  * [Ruby Web Frameworks](#ruby-web-frameworks)
-  * [PHP Web Frameworks](#php-web-frameworks)
-  * [Python Web Frameworks](#python-web-frameworks)
-  * [Ecommerce Frameworks](#ecommerce-frameworks)
-  * [Infrastructure management utilities](#infrastructure-management-utilities)
-  * [JS libraries](#js-libraries)
-  * [Front End Frameworks](#front-end-frameworks)
-  * [Front End Tools](#front-end-tools)
-  * [React utilities](#react-utilities)
-  * [ORM](#orm)
-  * [Shell Plugins](#shell-plugins)
-  * [Editor Plugins](#editor-plugins)
-  * [IDE & Text Editor](#ide--text-editor)
-  * [Linux utilities](#linux-utilities)
-  * [Development environments](#development-environments)
-  * [Other Awesome Lists](#other-awesome-lists)
+- [Tests](#tests)
+- [Logging and monitoring](#logging-and-monitoring)
+- [API Builders & DSL](#api-builders--dsl)
+- [Ruby Gems](#ruby-gems)
+  - [Our gems](#our-gems)
+  - [Third party gems](#third-party-gems)
+- [Ruby Web Frameworks](#ruby-web-frameworks)
+- [PHP Web Frameworks](#php-web-frameworks)
+- [Python Web Frameworks](#python-web-frameworks)
+- [Ecommerce Frameworks](#ecommerce-frameworks)
+- [React utilities](#react-utilities)
+- [JS libraries](#js-libraries)
+- [Front End Frameworks](#front-end-frameworks)
+- [Front End Tools](#front-end-tools)
+- [Infrastructure management utilities](#infrastructure-management-utilities)
+- [ORM](#orm)
+- [Shell Plugins](#shell-plugins)
+- [Editor Plugins](#editor-plugins)
+- [IDE & Text Editor](#ide--text-editor)
+- [Linux utilities](#linux-utilities)
+- [Development environments](#development-environments)
+- [Other awesome lists](#other-awesome-lists)
 
 ## Tests
   * [rubocop](https://github.com/bbatsov/rubocop) - A Ruby static code analyzer, based on the community Ruby style guide (*NOTA*: nuestro estilo lo estamos definiendo *entre todo el equipo* [este .rubocop.yml](https://github.com/the-cocktail/tools/blob/master/.rubocop.yml). No te cortes, comenta cualquier capricho que tengas!!)
@@ -41,6 +42,10 @@
   * [GraphQL](https://www.graphql.com/) - GraphQL is an open spec for a flexible API layer. Put GraphQL over your existing backends to build products faster than ever before.
 
 ## Ruby Gems
+### Our gems
+  * [Our gems](/Ruby/our_gems.md) - Gems developed by The Cocktail.
+  
+### Third party gems
   * [Goldiloader](https://github.com/salsify/goldiloader) - Lazy-loading con ActiveRecord.
   * [Pronto](https://github.com/prontolabs/pronto) - Quick automated code review of your changes
   * [spreadsheet](https://github.com/zdavatz/spreadsheet) - The Ruby Spreadsheet by ywesee GmbH
