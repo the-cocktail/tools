@@ -30,30 +30,10 @@ sudo chmod +x /usr/local/bin/aws-iam-authenticator
 
 **NOTA:** Para que devuelva las credenciales correctamente, primero debes tener configuradas las credenciales de acceso al proyecto de AWS, ya sea con `tacoma switch`, o con [variables de entorno de AWS](https://docs.aws.amazon.com/es_es/cli/latest/userguide/cli-configure-envvars.html).
 
-La variable `${CLUSTERNAME}` es el nombre del clúster de Kubernetes en AWS EKS.
+* La variable `${CLUSTERNAME}` es el nombre del clúster de Kubernetes en AWS EKS.
 
 ```bash
 aws eks update-kubeconfig --name ${CLUSTERNAME}
-```
-
-Una vez tengamos el fichero `~/.kube/config` actualizado, quizá haya que modificarlo para añadir el `rol` de IAM con el que nos autenticaremos en el clúster de Kubernetes (te lo podrá indicar tu DevOps favorito).
-
-Busca en el fichero, en la sección `users:` la configuración del clúster (comenzará por `arn:aws:eks:***`), y añade en la sección `args` las siguientes líneas:
-
-```yml
-[...]
-users:
-- name: arn:aws:eks:eu-west-1:697548185134:cluster/yogui-eks-cluster
-  user:
-    exec:
-      apiVersion: client.authentication.k8s.io/v1alpha1
-      args:
-      - token
-      - -i
-      - yogui-eks-cluster                             # Nombre del clúster en EKS
-      - -r                                            # Línea añadida. Indica que nos autenticamos mediante rol de IAM
-      - arn:aws:iam::221872063473:role/developer-role # Línea añadida. Indica el ARN del rol de IAM que utilizaremos para autenticarnos
-[...]
 ```
 
 Puedes comprobar que tienes acceso al clúster ejecutando lo siguiente:
