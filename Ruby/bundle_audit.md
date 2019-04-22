@@ -1,6 +1,6 @@
 # Análisis de vulnerabilidades con Audit
 
-Con esta gema podremos conocer las vulnerabilidades de seguridad asociadas a nuestro árbol de dependencias.
+Con esta gema podremos conocer las vulnerabilidades de seguridad existentes asociadas a nuestro árbol de dependencias.
 
 ## Instalación
 
@@ -36,17 +36,21 @@ Jenkinsfile
             echo 'Building...'
             sh 'docker-compose -f docker-compose-jenkins.yml build'
 
-            sh 'docker-compose -f docker-compose-jenkins.yml run --rm web bundle audit update'
-            sh 'docker-compose -f docker-compose-jenkins.yml run --rm web bundle audit'
+            sh 'docker-compose -f docker-compose-jenkins.yml run --rm web sh .audit.sh'
             }
  ```
 
+ Esto requiere que antes se haya creado un archivo `.audit.sh` en la raiz del proyecto con el siguiente contenido
+
+ ```
+    #!/usr/bin/env sh
+    bundle exec bundle-audit update
+    bundle exec bundle-audit
+ ```
  Si existen vulnerabilidades devolverá un exit 1 e interrumpirá la ejecución.
 
- Algunas vulnerabilidades son muy difíciles de corregir, por lo que este proceso es muy restrictivo.
+ Se lanza mediante un script ya que el lanzar los comandos `audit` directamente sobre el contenedor no dan el resultado esperado, ya que hay algunos conflictos.
 
- Si se llega al punto de tener alguna vulnerabilidad imposible de corregir en nuestro proyecto, se deberían comentar/eliminar las referencias a audit dentro del Jenkinsfile
- 
  ### Añadir excepciones
  
  En el caso de encontrar alguna vulnerabilidad que no se puede solucionar en el momento, existe una manera de hacer que audit la ignore.
@@ -67,3 +71,11 @@ Title: Broken Access Control vulnerability in Active Job
 Solution: upgrade to ~> 4.2.11, ~> 5.0.7.1, ~> 5.1.6.1, >= 5.2.1.1
 ```
 En el siguiente escaneo ya no aparecería esta vulnerabilidad y el build de Jenkins pasaría sin problemas.
+
+ ```
+    #!/usr/bin/env sh
+    bundle exec bundle-audit update
+    bundle exec bundle-audit --ignore  CVE-2018-16476
+ ```
+
+De esta manera se lanzaría el script del audit ignorando la vulnerabilidad que no se ha podido resolver.
