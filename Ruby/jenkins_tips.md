@@ -4,15 +4,15 @@
 
 ## Rspec
 
-Al lanzar la suite de tests de Rspec se puede lanzar con el flag --fail-fast para ahorrar tiempo en caso de producirse algún error
+Al lanzar la suite de tests de Rspec se puede lanzar con el flag **--fail-fast** para ahorrar tiempo en caso de producirse algún error
 ```
     sh 'docker-compose -f docker-compose-jenkins.yml run --rm web rspec --fail-fast'
 ```
 
 ## Cucumber
 
-Se puede mejorar la suite de tests de Cucumber provocando un early return cuando falle uno de sus test.
-Se modificará el archivo de configuración features/support/env.rb
+Se puede mejorar la suite de tests de Cucumber provocando un _early return_ cuando falle uno de sus test.
+Se modificará el archivo de configuración **features/support/env.rb**
 ```
     After do |scenario|
         Cucumber.wants_to_quit = true if scenario.failed?
@@ -25,7 +25,7 @@ Para entornos de trabajo de pre-producción se puede quere integrar un deploy au
 Para ello se añade un nuevo step en el Jenkinsfile
 
 
-Jenkinsfile
+_Jenkinsfile_
 ```
     stage('Deploy in Staging') {
         when {
@@ -40,8 +40,9 @@ Jenkinsfile
 
  Esto requiere que en el step donde se declaran las variables de entorno, al comienzo del Jenkinsfile, tengan algunas variables que van a hacer falta.
 
- PARA AWS
+**CONFIGURACION AWS**
 
+_Jenkinsfile_
  ```
     environment {
 
@@ -57,7 +58,7 @@ Jenkinsfile
 Las variables de tipo AWS_ servirán para autenticar el proyecto en AWS y poder obtener roles e IP's de las maquinas donde se hará el deploy.
 Necesitaremos que estén disponibles en el contenedor declarándolas en los archivos
 
-docker-compose-jenkins.yml
+_docker-compose-jenkins.yml_
 
  ```
     services:
@@ -69,7 +70,7 @@ docker-compose-jenkins.yml
             - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
  ```
 
-Dockerfile
+_Dockerfile_
  ```
     ARG AWS_SECRET_ACCESS_KEY
     ARG AWS_ACCESS_KEY_ID
@@ -80,7 +81,7 @@ Dockerfile
     ENV AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
  ```
 
- PARA SSH A LA MAQUINA DEL DEPLOY
+*CONFIGURACION SSH-CAPISTRANO*
 
  ```
     environment {
@@ -102,7 +103,7 @@ Dockerfile
 Copiamos la clave privada.
 Necesitaremos que estén disponibles en el contenedor declarándolas en los archivos
 
-Dockerfile
+_Dockerfile_
  ```
     RUN mkdir /root/.ssh
     COPY id_rsa /root/.ssh/id_rsa
@@ -115,3 +116,29 @@ Será el usuario root el que inicie el deploy.
 
 En el servidor de pre-producción deberemos haber copiado la clave pública en el archivo /home/deploys/.ssh/authorized_keys.
 De esta manera será posible el tunel ssh desde el contenedor de la aplicación corriendo en Jenkins a la máquina de pre-producción
+
+___
+
+
+El archivo _.deploy_actions.sh_ es el que lanzará el deploy
+ ```
+    #!/usr/bin/env sh
+
+    eval `ssh-agent`
+    ssh-add /root/.ssh/id_rsa
+
+    echo '------------------------ shows if ssh agent has loaded the key correctly -----------------------------'
+    ssh-add -l
+
+    bundle exec cap staging deploy BRANCH=Staging
+ ```
+
+## Slack
+
+Casi todos los proyectos tienen integración con slack.
+Para no generar demasiado ruido en las fases de pruebas se puede crear un canal de Slack dedicado dentro del _docker-compose-jenkins.yml_
+```
+        //SLACK_CHANNEL       = '#canal_general'
+        // Slack_channel for Testing
+        SLACK_CHANNEL       = '#canal_pruebas_jenkins'
+```
