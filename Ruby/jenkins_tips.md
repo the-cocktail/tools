@@ -40,8 +40,6 @@ _Jenkinsfile_
 
  Esto requiere que en el step donde se declaran las variables de entorno, al comienzo del _Jenkinsfile_, tengan algunas variables que van a hacer falta.
 
-**CONFIGURACION AWS**
-
 _Jenkinsfile_
  ```
     environment {
@@ -55,6 +53,9 @@ _Jenkinsfile_
         SSH_CREDENTIALS = credentials('some_authorized_id_rsa')
     }
  ```
+
+**CONFIGURACION AWS**
+
 Las variables de tipo **AWS_** servirán para autenticar el proyecto en *AWS* y poder obtener roles e IP's de las maquinas donde se hará el deploy.  
 Necesitaremos que estén disponibles en el contenedor declarándolas en los archivos
 
@@ -83,12 +84,6 @@ _Dockerfile_
 
 **CONFIGURACION SSH-CAPISTRANO**
 
- ```
-    environment {
-        //ssh configuration
-        SSH_CREDENTIALS = credentials('some_authorized_id_rsa')
-    }
- ```
  Las variables de tipo **SSH_** servirán para la conexión tipo ssh que utiliza capistrano para hacer el deploy.
 
 
